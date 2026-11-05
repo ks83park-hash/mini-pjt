@@ -1,0 +1,167 @@
+[
+  {
+    "order_id": "ORD-1001",
+    "customer_id": "C001",
+    "product": "노트북",
+    "amount": 320000,
+    "status": "배송 중",
+    "ordered_at": "2026-11-02",
+    "delivered_at": null,
+    "opened": false,
+    "tracking_no": "TRK-9001"
+  },
+  {
+    "order_id": "ORD-1002",
+    "customer_id": "C001",
+    "product": "무선 청소기",
+    "amount": 280000,
+    "status": "배송 완료",
+    "ordered_at": "2026-10-30",
+    "delivered_at": "2026-11-03",
+    "opened": false,
+    "tracking_no": "TRK-9002"
+  },
+  {
+    "order_id": "ORD-1003",
+    "customer_id": "C002",
+    "product": "운동화",
+    "amount": 89000,
+    "status": "배송 중",
+    "ordered_at": "2026-11-03",
+    "delivered_at": null,
+    "opened": false,
+    "tracking_no": "TRK-9003"
+  },
+  {
+    "order_id": "ORD-1004",
+    "customer_id": "C001",
+    "product": "텀블러",
+    "amount": 25000,
+    "status": "배송 전",
+    "ordered_at": "2026-11-05",
+    "delivered_at": null,
+    "opened": false,
+    "tracking_no": null
+  },
+  {
+    "order_id": "ORD-1005",
+    "customer_id": "C002",
+    "product": "블루투스 이어폰",
+    "amount": 59000,
+    "status": "배송 완료",
+    "ordered_at": "2026-10-15",
+    "delivered_at": "2026-10-20",
+    "opened": false,
+    "tracking_no": "TRK-9004"
+  },
+  {
+    "order_id": "ORD-1006",
+    "customer_id": "C002",
+    "product": "백팩",
+    "amount": 74000,
+    "status": "배송 전",
+    "ordered_at": "2026-11-05",
+    "delivered_at": null,
+    "opened": false,
+    "tracking_no": null
+  },
+  {
+    "order_id": "ORD-1007",
+    "customer_id": "C003",
+    "product": "전기 포트",
+    "amount": 38000,
+    "status": "배송 완료",
+    "ordered_at": "2026-11-01",
+    "delivered_at": "2026-11-04",
+    "opened": false,
+    "tracking_no": "TRK-9005"
+  },
+  {
+    "order_id": "ORD-1008",
+    "customer_id": "C003",
+    "product": "수건 세트",
+    "amount": 22000,
+    "status": "배송 중",
+    "ordered_at": "2026-11-03",
+    "delivered_at": null,
+    "opened": false,
+    "tracking_no": "TRK-9006"
+  },
+  {
+    "order_id": "ORD-1009",
+    "customer_id": "C003",
+    "product": "향초",
+    "amount": 18000,
+    "status": "배송 완료",
+    "ordered_at": "2026-10-05",
+    "delivered_at": "2026-10-10",
+    "opened": true,
+    "tracking_no": "TRK-9007"
+  },
+  {
+    "order_id": "ORD-1010",
+    "customer_id": "C004",
+    "product": "책상 조명",
+    "amount": 46000,
+    "status": "배송 완료",
+    "ordered_at": "2026-10-28",
+    "delivered_at": "2026-11-01",
+    "opened": false,
+    "tracking_no": "TRK-9008"
+  },
+  {
+    "order_id": "ORD-1011",
+    "customer_id": "C004",
+    "product": "에코백",
+    "amount": 12000,
+    "status": "배송 전",
+    "ordered_at": "2026-11-05",
+    "delivered_at": null,
+    "opened": false,
+    "tracking_no": null
+  },
+  {
+    "order_id": "ORD-1012",
+    "customer_id": "C004",
+    "product": "모니터",
+    "amount": 210000,
+    "status": "배송 중",
+    "ordered_at": "2026-11-01",
+    "delivered_at": null,
+    "opened": false,
+    "tracking_no": "TRK-9009"
+  },
+  {
+    "order_id": "ORD-1013",
+    "customer_id": "C005",
+    "product": "키보드",
+    "amount": 95000,
+    "status": "배송 완료",
+    "ordered_at": "2026-10-24",
+    "delivered_at": "2026-10-28",
+    "opened": false,
+    "tracking_no": "TRK-9010"
+  },
+  {
+    "order_id": "ORD-1014",
+    "customer_id": "C005",
+    "product": "머그컵 세트",
+    "amount": 31000,
+    "status": "배송 완료",
+    "ordered_at": "2026-10-30",
+    "delivered_at": "2026-11-02",
+    "opened": false,
+    "tracking_no": "TRK-9011"
+  },
+  {
+    "order_id": "ORD-1015",
+    "customer_id": "C005",
+    "product": "공기청정기",
+    "amount": 150000,
+    "status": "배송 중",
+    "ordered_at": "2026-11-02",
+    "delivered_at": null,
+    "opened": false,
+    "tracking_no": "TRK-9012"
+  }
+]

@@ -12,7 +12,7 @@ from conftest import load_eval_set
 CASES = load_eval_set()
 VALID_TYPES = {
     "fact", "paraphrase", "no_answer",
-    "single_tool", "multi_tool", "multi_agent", "guardrail",
+    "single_tool", "multi_tool", "guardrail",
 }
 # 답변 불가 응답으로 인정하는 표현 (SERVICE.md: "찾을 수 없음" / "담당 범위가 아닙니다")
 NO_ANSWER_SIGNALS = ["찾을 수 없", "담당 범위가 아닙니다"]
@@ -28,8 +28,8 @@ def _ids(cases):
 
 
 # ---------------------------------------------------------------- 1) 구조 검사
-def test_평가셋은_20문항_이상():
-    assert len(CASES) >= 20
+def test_평가셋은_40문항():
+    assert len(CASES) == 40
 
 
 def test_id가_중복되지_않는다():
@@ -49,11 +49,22 @@ def test_답변_불가_2개_이상_가드레일_2개_이상():
 
 def test_유형별_구성이_기획서와_같다():
     count = Counter(c["type"] for c in CASES)
-    assert count["fact"] + count["paraphrase"] == 6
-    assert count["no_answer"] == 3
-    assert count["single_tool"] + count["multi_tool"] == 4
-    assert count["multi_agent"] == 3
-    assert count["guardrail"] == 4
+    assert count["fact"] + count["paraphrase"] == 12
+    assert count["no_answer"] == 6
+    assert count["single_tool"] + count["multi_tool"] == 14
+    assert count["guardrail"] == 8
+
+
+def test_모든_문항에_인_아웃_세트가_있다():
+    """인(in): 서비스가 처리해야 하는 질문, 아웃(out): 거절하거나 막아야 하는 질문."""
+    assert {c["set"] for c in CASES} <= {"in", "out"}
+    count = Counter(c["set"] for c in CASES)
+    assert count["in"] == 28 and count["out"] == 12
+    for c in CASES:
+        if c["type"] == "no_answer":
+            assert c["set"] == "out"
+        if c["type"] in ("fact", "paraphrase", "single_tool", "multi_tool"):
+            assert c["set"] == "in"
 
 
 def test_모든_문항에_질문이_있다():
@@ -90,13 +101,6 @@ def test_기대한_도구가_호출된다(ask, case):
     assert sorted(resp["tools_called"]) == sorted(case["expected_tools"])
     if "expected_status" in case:
         assert resp["status"] == case["expected_status"]
-
-
-@pytest.mark.parametrize("case", _by_type("multi_agent"), ids=_ids(_by_type("multi_agent")))
-def test_기대한_에이전트를_거친다(ask, case):
-    resp = ask(case["question"])
-    assert "agents" in resp, "응답에 agents가 필요함"
-    assert set(case["expected_agents"]) <= set(resp["agents"])
 
 
 @pytest.mark.parametrize("case", _by_type("guardrail"), ids=_ids(_by_type("guardrail")))

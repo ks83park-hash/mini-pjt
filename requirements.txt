@@ -4,9 +4,12 @@ langchain-core>=1.7
 chromadb>=1.5
 langchain-chroma>=1.1
 langchain-text-splitters>=1.1
+langgraph>=1.0
+fastapi>=0.100
+ragas>=0.4        # 5-4 평가 지표. langchain-community, langchain-openai, openai, datasets 등이 함께 설치된다
+uvicorn>=0.30
 
 # 이후 작업에서 필요한 후보 (해당 작업에 들어갈 때 사용자 허락을 받고 추가한다)
 # rank-bm25, kiwipiepy                     (1-5 하이브리드 검색)
-# fastapi, uvicorn                         (1-7 POST /query)
 # pytest                                   (tests/)
-# langgraph, langgraph-supervisor, fastmcp, langchain-mcp-adapters   (묶음 2~4)
+# langgraph-supervisor, fastmcp, langchain-mcp-adapters   (선택: Supervisor 분리, MCP)

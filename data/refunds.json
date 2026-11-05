@@ -1,0 +1,42 @@
+[
+  {
+    "refund_id": "RF-001",
+    "order_id": "ORD-1005",
+    "customer_id": "C002",
+    "amount": 59000,
+    "reason": "단순 변심",
+    "status": "거절"
+  },
+  {
+    "refund_id": "RF-002",
+    "order_id": "ORD-1009",
+    "customer_id": "C003",
+    "amount": 18000,
+    "reason": "단순 변심",
+    "status": "거절"
+  },
+  {
+    "refund_id": "RF-003",
+    "order_id": "ORD-1013",
+    "customer_id": "C005",
+    "amount": 95000,
+    "reason": "상품 불량",
+    "status": "완료"
+  },
+  {
+    "refund_id": "RF-004",
+    "order_id": "ORD-1007",
+    "customer_id": "C003",
+    "amount": 38000,
+    "reason": "단순 변심",
+    "status": "승인"
+  },
+  {
+    "refund_id": "RF-005",
+    "order_id": "ORD-1010",
+    "customer_id": "C004",
+    "amount": 46000,
+    "reason": "오배송",
+    "status": "접수"
+  }
+]

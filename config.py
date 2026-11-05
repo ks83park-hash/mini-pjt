@@ -18,6 +18,9 @@ REQUIRED_KEYS = [
     "BEDROCK_MODEL_ID",
     "EMBEDDING_MODEL_ID",
 ]
+# 없어도 되는 설정: 예비 모델 ID 목록(쉼표로 구분, 기본 모델이 한도·장애로 막히면 순서대로 쓴다),
+# 평가 심사(LLM-as-Judge)용 모델 ID (비우면 BEDROCK_MODEL_ID를 쓴다).
+OPTIONAL_KEYS = ["FALLBACK_MODEL_IDS", "JUDGE_MODEL_ID"]
 # 값을 화면과 로그에 그대로 보여주면 안 되는 설정
 SECRET_KEYS = {"AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"}
 
@@ -25,7 +28,12 @@ SECRET_KEYS = {"AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"}
 def load_settings():
     """.env를 읽어 {이름: 값} dict를 돌려준다. 없는 값은 빈 문자열이다."""
     load_dotenv(ENV_PATH)
-    return {key: os.environ.get(key, "").strip() for key in REQUIRED_KEYS}
+    return {key: os.environ.get(key, "").strip() for key in REQUIRED_KEYS + OPTIONAL_KEYS}
+
+
+def fallback_model_ids(settings):
+    """예비 모델 ID 목록 (비어 있으면 빈 리스트)."""
+    return [m.strip() for m in settings.get("FALLBACK_MODEL_IDS", "").split(",") if m.strip()]
 
 
 def missing_keys(settings):

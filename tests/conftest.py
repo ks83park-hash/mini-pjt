@@ -8,8 +8,7 @@
     {
       "answer": str,                              # 답변 본문
       "status": "ok" | "blocked" | "approval_required",
-      "tools_called": [str],                      # 호출된 도구 이름 (get_order, track_shipment, request_refund)
-      "agents": [str]                             # 거친 에이전트 (order, shipping, refund)
+      "tools_called": [str]                       # 호출된 도구 이름 (get_order, track_shipment, request_refund)
     }
 요청 형식:
     {"question": str, "customer_id": "C001"}      # 더미 세션의 로그인 고객

@@ -1,0 +1,37 @@
+[
+  {
+    "customer_id": "C001",
+    "name": "김하늘",
+    "phone": "010-0000-0001",
+    "email": "c001@example.com",
+    "address": "서울시 가나구 다라로 1"
+  },
+  {
+    "customer_id": "C002",
+    "name": "이바다",
+    "phone": "010-0000-0002",
+    "email": "c002@example.com",
+    "address": "부산시 마바구 사아로 2"
+  },
+  {
+    "customer_id": "C003",
+    "name": "박나무",
+    "phone": "010-0000-0003",
+    "email": "c003@example.com",
+    "address": "대구시 자차구 카타로 3"
+  },
+  {
+    "customer_id": "C004",
+    "name": "최구름",
+    "phone": "010-0000-0004",
+    "email": "c004@example.com",
+    "address": "제주시 파하구 거너로 4"
+  },
+  {
+    "customer_id": "C005",
+    "name": "정바람",
+    "phone": "010-0000-0005",
+    "email": "c005@example.com",
+    "address": "인천시 더러구 머버로 5"
+  }
+]
